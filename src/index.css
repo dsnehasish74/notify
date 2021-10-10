@@ -6,9 +6,82 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:#f9f9f9;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.link{
+	text-decoration:none!important;
+	color: inherit;
+}
+
+.create_form{
+	width: 400px;
+	background-color: #eeeeee;
+	margin: 50px auto;
+	display: flex;
+	flex-direction: column;
+	height: 400px;
+	justify-content: space-around;
+	align-items: center;
+	padding: 20px;
+}
+
+.name_field{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.name_field input{
+	padding: 10px;
+	outline: none;
+	border:none;
+	border-radius: 10px;
+	margin: 10px 0px;
+
+}
+
+.name_field textarea{
+	padding: 10px;
+	outline: none;
+	border:none;
+	border-radius: 10px;
+	margin: 10px 0px;
+}
+
+.upload_button{
+	padding: 10px 20px;
+	background-color: #8981D8;
+	border: none;
+	border-radius: 10px;
+	font-weight: bold;
+	color: white;
+}
+
+.signin{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+}
+.s_c{
+	background-color: grey;
+	min-height: 100vh;
+}
+.Signin_button{
+	background-color: #8981D8;
+	color: white;
+	border:none;
+	font-weight: bold;
+	padding: 20px 40px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.svg_img{
+	width: 100%;
 }

@@ -61,6 +61,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     background-color: #f9f9f9;
+    min-height: 100vh;
 }
 
 .Note{
