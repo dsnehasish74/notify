@@ -13,7 +13,7 @@ const Upload=(props)=>{
 				name: name,
 				description: Description,
 				subject: Subject,
-				createdAt: new Date,
+				createdAt: new Date(),
 				resources: [],
 				createdBy: auth.currentUser.uid,
 				authorName:auth.currentUser.displayName,
