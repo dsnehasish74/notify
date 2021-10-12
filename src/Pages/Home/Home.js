@@ -5,20 +5,24 @@ import MyNotes from '../MyNotes/MyNotes'
 import Upload from '../Upload/Upload'
 import Signup from '../Signup/Signup'
 import {useState,useEffect,useLayoutEffect } from 'react'
-import {auth,provider} from '../../firebase.js'
-import Loader from '../Loader/Loader'
+import {auth,provider,db,storage} from '../../firebase.js'
+import Loaderr from '../Loader/Loader'
 const Home=()=>{
     const [tab,setTab]=useState(2);
-    const [isLoaded,setIsLoaded]=useState(<Loader />);
+    const [isLoaded,setIsLoaded]=useState(<Loaderr />);
+    const [name,setName]=useState("")
     useEffect(()=>{
         if (auth.currentUser) {
+            db.collection("Users").doc(auth.currentUser.uid).get().then((doc)=>{
+                setName(doc.data().name);
+            })
             setIsLoaded(null);
         }
     })
 
     useLayoutEffect(() => {
     auth.onAuthStateChanged((user) => {
-      if (user) setIsLoaded(<Loader />);
+      if (user) setIsLoaded(<Loaderr />);
       else setIsLoaded(<Signup />);
     });
   }, []);
@@ -88,7 +92,7 @@ const Home=()=>{
                     setTab(6);
                 })}>
                     <div className="profile_picture"><i className="fas fa-2x fa-user-circle"></i></div>
-                    <p className="greetings" styele={{color: "#808080"}}>Hi! Snehasish</p>
+                    <p className="greetings" styele={{color: "#808080"}}>Hi! {name}</p>
                 </div>
             </div>
             <div className="filter"></div>

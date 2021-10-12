@@ -171,6 +171,14 @@
   background: #8981D8; 
 }
 
+.lc{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Md. Enjamum Hossain12:40
 #6A61C0 : top 
 Md. Enjamum Hossain12:43
